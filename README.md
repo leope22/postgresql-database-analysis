@@ -14,8 +14,6 @@ O objetivo foi modelar um sistema de grande escala, analisar gargalos de perform
   * **Segurança e Controle de Acesso**: Implementação de um sistema robusto de perfis de usuário (`Admin`, `Instrutor`, `Aluno`, `Anônimo`) com `ROLES`, `GRANTs`, `VIEWS` e `TRIGGERS` para garantir a integridade e a privacidade dos dados.
   * **Programação no SGBD**: Desenvolvimento de `Funções Armazenadas` em PL/pgSQL para encapsular lógicas de negócio complexas e garantir a segurança contra SQL Injection.
 
------
-
 ## Análise e Otimização de Consultas
 
 Uma parte central do projeto foi a análise aprofundada e a reestruturação de consultas SQL complexas para maximizar a performance do banco de dados. Utilizando a ferramenta `EXPLAIN ANALYZE`, foram identificados gargalos de performance, como junções ineficientes e varreduras sequenciais (`Seq Scan`) em tabelas de grande volume.
@@ -23,8 +21,6 @@ Uma parte central do projeto foi a análise aprofundada e a reestruturação de 
 Para solucionar esses problemas, as consultas foram reescritas com **técnicas avançadas de SQL**, como o uso de Common Table Expressions (CTEs) e a criação de índices estratégicos. Essas mudanças permitiram que o otimizador do PostgreSQL gerasse planos de execução muito mais eficientes, pré-filtrando dados e reduzindo o custo computacional das junções.
 
 O processo validou a eficácia das otimizações aplicadas, resultando em melhorias de performance significativas. Em alguns casos, a reestruturação das consultas levou a uma **redução de mais de 35% no tempo médio de execução**.
-
------
 
 ## Segurança e Funções Armazenadas
 
